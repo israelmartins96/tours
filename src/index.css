@@ -1,0 +1,252 @@
+/* Quick Resets */
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --text-white: #FEFEFE;
+  --text-blue: #49A6E9;
+  --text-blue--hover: #115688;
+  --text-red: #BB2525;
+  --bg-blue: #49A6E9;
+  --bg-blue--hover: #115688;
+  --bg-blue--light: #EBF7FF;
+  --bg-red: #BB2525;
+  --bg-red--dark: #400D0D;
+  --body-text-size: 1rem;
+  --border-radius-4: 4px;
+}
+
+/* Body */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #747F8A;
+  background-color: #F1F5F8;
+}
+
+/* General Elements Styling */
+h1, h2, h3, h4, h5, h6 {
+  color: #3E3D41;
+  letter-spacing: 0.5px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* General Class Styling */
+.btn {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  padding: 4px 8px;
+  border: none;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.btn-primary {
+  color: var(--text-white);
+  background-color: var(--bg-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--bg-blue--hover);
+}
+
+/* Main Container */
+.container {
+  width: 90vw;
+  max-width: 620px;
+  margin: 80px auto;
+}
+
+
+/********* TOURS LOADING *********/
+
+/* Loading */
+.loading {
+  text-align: center;
+}
+
+.loading h2 {
+  font-size: 2rem;
+  margin-top: 45vh;
+  transition: font-size 0.3s ease-in-out, margin 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 500px) {
+  .loading h2 {
+    font-size: 4rem;
+    margin-top: 40vh;
+  }
+}
+
+
+/********* TOURS *********/
+
+/* Main Tours Heading */
+.container .main-heading {
+  margin-bottom: 60px;
+}
+
+/* Main Tours Heading - Heading */
+.container .main-heading h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Main Tours Heading - Underline */
+.container .main-heading .underline {
+  width: 96px;
+  height: 4px;
+  margin: auto;
+  background-color: var(--bg-blue);
+}
+
+/* Tour */
+.container .tours .tour {
+  width: 100%;
+  margin: 48px auto;
+  background-color: #FEFEFE;
+  border-radius: var(--border-radius-4);
+  overflow: hidden;
+  cursor: default;
+  box-shadow: 0 3px 10px rgba(125, 125, 125, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.container .tours .tour:hover {
+  box-shadow: 0 3px 15px rgba(125, 125, 125, 0.2);
+}
+
+/* Tour Image */
+.container .tours .tour .tour-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* Tour Info */
+.container .tours .tour .tour-info {
+  padding: 24px 32px;
+}
+
+/* Tour Info Heading */
+.container .tours .tour .tour-info header {
+  margin-bottom: 12px;
+  transition: display 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 769px) {
+  .container .tours .tour .tour-info header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Tour Info Heading - Title */
+.container .tours .tour .tour-info header .tour-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 500px) {
+  .container .tours .tour .tour-info header .tour-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Tour Info Heading - Fee */
+.container .tours .tour .tour-info header .tour-fee {
+  font-size: 0.9rem;
+  color: var(--text-blue);
+  width: fit-content;
+  background-color: var(--bg-blue--light);
+  padding: 2px 8px;
+  margin-top: 4px;
+  border-radius: var(--border-radius-4);
+}
+
+@media screen and (min-width: 500px) {
+  .container .tours .tour .tour-info header .tour-fee {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+}
+
+/* Tour Info Description */
+.container .tours .tour .tour-info .tour-description {
+  margin: 16px auto 20px;
+}
+
+/* Tour Info Description - Body */
+.container .tours .tour .tour-info .tour-description .body {
+  font-size: var(--body-text-size);
+  display: inline;
+  margin-right: 4px;
+}
+
+/* Tour Info Description - Toggle Button */
+.container .tours .tour .tour-info .tour-description .description-toggle {
+  font-size: var(--body-text-size);
+  color: var(--text-blue);
+  background: none;
+  padding: 0;
+  border: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.container .tours .tour .tour-info .tour-description .description-toggle:hover {
+  color: var(--text-blue--hover);
+}
+
+/* Tour Info - Remove Tour Button */
+.container .tours .tour .tour-info .remove-tour {
+  font-size: var(--body-text);
+  color: var(--text-red);
+  display: block;
+  width: 200px;
+  background-color: transparent;
+  border: 1px solid var(--text-red);
+  border-radius: var(--border-radius-4);
+  margin: auto;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.container .tours .tour .tour-info .remove-tour:hover {
+  color: var(--text-white);
+  background-color: var(--bg-red);
+}
+
+.container .tours .tour .tour-info .remove-tour:active {
+  color: var(--text-white);
+  background-color: var(--bg-red--dark);
+}
+
+
+/********* TOURS UNAVAILABLE *********/
+
+/* No Tours */
+.container .no-tours {
+  width: 100%;
+  margin-top: 40vh;
+}
+
+/* No Tours Feedback Message */
+.container .no-tours h2 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Refresh Tours Button */
+.container .no-tours .refresh-tours {
+  font-size: 1.25rem;
+  display: block;
+  margin: auto;
+}
